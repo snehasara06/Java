@@ -1,0 +1,47 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>Cars1</servlet-name>
+    <servlet-class>servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cars1</servlet-name>
+    <url-pattern>/kia</url-pattern>
+  </servlet-mapping>
+   <!-- <servlet>
+    <servlet-name>Cars2</servlet-name>
+    <servlet-class>SkodaServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cars2</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping> -->
+ <context-param>
+        <param-name>jdbcURL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/cars</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>jdbcUsername</param-name>
+        <param-value>root</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>jdbcPassword</param-name>
+        <param-value></param-value>
+    </context-param>
+  <servlet>
+        <servlet-name>ControllerServlet</servlet-name>
+        <servlet-class>SkodaServlet</servlet-class>
+    </servlet>
+ 
+    <servlet-mapping>
+        <servlet-name>ControllerServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+</web-app>
