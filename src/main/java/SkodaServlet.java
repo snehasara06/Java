@@ -42,13 +42,13 @@ public class SkodaServlet extends HttpServlet {
                 insertCar(request, response);
                 break;
             case "/delete":
-                deleteBook(request, response);
+                deleteCar(request, response);
                 break;
             case "/edit":
                 showEditForm(request, response);
                 break;
             case "/update":
-                updateBook(request, response);
+                updateCar(request, response);
                 break;
             default:
                 listCars(request, response);
@@ -97,7 +97,7 @@ public class SkodaServlet extends HttpServlet {
         response.sendRedirect("listCars");
     }
  
-    private void updateBook(HttpServletRequest request, HttpServletResponse response)
+    private void updateCar(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
     String name  = request.getParameter("name");
@@ -111,7 +111,7 @@ public class SkodaServlet extends HttpServlet {
         response.sendRedirect("listCars");
     }
  
-    private void deleteBook(HttpServletRequest request, HttpServletResponse response)
+    private void deleteCar(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
  
